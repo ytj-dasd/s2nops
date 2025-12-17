@@ -9,11 +9,11 @@ import yaml
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import CSVLogger, WandbLogger
 
-# from modules.Discoverer_sp2_wNC import Discoverer
+from modules.Discoverer_sp2_wNC import Discoverer
 # from modules.Discoverer_semiOT import Discoverer
 # from modules.Discoverer_sp2 import Discoverer
 # from modules.Discoverer_sp2_v2 import Discoverer
-from modules.Discoverer import Discoverer
+# from modules.Discoverer import Discoverer
 # from modules.Discoverer_ema_loss import Discoverer
 from utils import unkn_labels as unk_labels
 from utils.callbacks import mIoUEvaluatorCallback
