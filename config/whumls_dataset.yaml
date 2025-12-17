@@ -1,0 +1,70 @@
+dataset_path: /home/guitu/文档/pc_ss/snops_whu/whu-mls
+
+folder_name:
+  input: velodyne
+  label: labels
+  superpoint: superpoint
+
+split_sequence: # sequence numbers
+  train:
+    - 'o1'
+    - 'o2'
+    - 'o4'
+  valid:
+    - 'o3'
+    # - 'L002_test'
+
+learning_map:
+  0: -1 # "unclassified",
+  1: 0 # "Ground",
+  2: 1 # "Road marking",
+  3: 2 # "Tree",
+  4: 3 # "Person",
+  5: 4 # "Low vegetation",
+  6: 5 # "Pole",
+  7: 6 # "Car",
+  8: 7 # "Fence"
+
+learning_map_inv: # inverse of previous map
+  -1: 0 # "unclassified",
+  0: 1 # "Ground",
+  1: 2 # "Road marking",
+  2: 3 # "Tree",
+  3: 4 # "Person",
+  4: 5 # "Low vegetation",
+  5: 6 # "Pole",
+  6: 7 # "Car",
+  7: 8 # "Fence"
+
+color_map: # bgr
+  0: [255, 255, 255]   # unlabeled     
+  1: [140, 140, 140]   # Ground
+  2: [  7, 255, 235]   # Road marking   
+  3: [  3, 200,   4]   # Tree
+  4: [120, 120, 180]   # Person
+  5: [230, 230,   6]   # Low vegetation
+  6: [255,   0,  51]   # Pole
+  7: [200, 102,   0]   # Car
+  8: [  6, 184, 255]   # Fence
+
+labels: 
+  0: "unlabeled"
+  1: "Ground"
+  2: "Road marking"
+  3: "Tree"
+  4: "Person"
+  5: "Low vegetation"
+  6: "Pole"
+  7: "Car"
+  8: "Fence"
+
+content: # as a ratio with the total number of points
+  0: 0.0000e+00
+  1: 4.1047e-01
+  2: 3.2170e-02
+  3: 1.2526e-01
+  4: 2.4986e-04
+  5: 3.4417e-01
+  6: 9.8642e-03
+  7: 1.1918e-02
+  8: 6.5899e-02

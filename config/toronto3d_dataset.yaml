@@ -1,0 +1,71 @@
+dataset_path: /home/guitu/文档/pc_ss/snops_whu/toronto3d
+# /home/guitu/文档/pc_ss/toronto3d/
+
+folder_name:
+  input: velodyne
+  label: labels
+  superpoint: superpoint
+
+split_sequence: # sequence numbers
+  train:
+    - 'L001'
+    - 'L003'
+    - 'L004'
+  valid:
+    - 'L002'
+    # - 'L002_test'
+
+learning_map:
+  0: 0 # "unclassified",
+  1: 1 # "Ground",
+  2: 2 # "Road marking",
+  3: 3 # "Natural",
+  4: 4 # "Building",
+  5: 5 # "Utility line",
+  6: 6 # "Pole",
+  7: 7 # "Car",
+  8: 8 # "Fence"
+
+learning_map_inv: # inverse of previous map
+  0: 0 # "unclassified",
+  1: 1 # "Ground",
+  2: 2 # "Road marking",
+  3: 3 # "Natural",
+  4: 4 # "Building",
+  5: 5 # "Utility line",
+  6: 6 # "Pole",
+  7: 7 # "Car",
+  8: 8 # "Fence"
+
+color_map: # bgr
+  0: [255, 255, 255]   # unlabeled     
+  1: [140, 140, 140]   # Ground
+  2: [  7, 255, 235]   # Road marking   
+  3: [  3, 200,   4]   # Natural
+  4: [120, 120, 180]   # Building
+  5: [230, 230,   6]   # Utility line
+  6: [255,   0,  51]   # Pole
+  7: [200, 102,   0]   # Car
+  8: [  6, 184, 255]   # Fence
+
+labels: 
+  0: "unlabeled"
+  1: "Ground"
+  2: "Road marking"
+  3: "Natural"
+  4: "Building"
+  5: "Utility line"
+  6: "Pole"
+  7: "Car"
+  8: "Fence"
+
+content: # as a ratio with the total number of points
+  0: 0.00000000e+00
+  1: 5.38308993e-01
+  2: 2.20439045e-02
+  3: 7.07402527e-02
+  4: 2.77623884e-01
+  5: 8.97168118e-03
+  6: 1.13098006e-02
+  7: 6.55796986e-02
+  8: 5.42178496e-03
