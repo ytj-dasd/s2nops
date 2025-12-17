@@ -1,18 +1,21 @@
 # Novel Class Discovery for Point Cloud Segmentation: An Semantic Prior-Guided and Superpoint-Enhanced Approach
 
+**Model Architecture**
 ![Model Architecture](assets/1.png)
+
+**Results**
 ![Results](assets/2.png)
 
 ## Introduction
 
 
 Authors: 
-        [Tangjun Yao]，
-        [Shaoming Zhang],
-        [Yuhan Zhang],
-        [Siyu Wu],
-        [Changhong Xie],
-        [Baoxin Feng]
+        Tangjun Yao,
+        Shaoming Zhang,
+        Yuhan Zhang,
+        Siyu Wu,
+        Changhong Xie,
+        Baoxin Feng
 
 
 ## Installation
@@ -53,11 +56,14 @@ To run the code, you need to install:
 
 ## Commands
 ### Training
+```
 python main_discover.py -s 0 --dataset WhuMLS --dataset_config config/whumls_dataset.yaml --downsampling=80000 --voxel_size=0.025 --batch_size=2 --num_workers 24 --num_heads=5 --overcluster_factor=3 --use_scheduler --epochs=150 --queue_start_epoch=10 --warmup_epochs=20 --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3 
+```
 
 ### Inference
+```
 python inference.py -s 0 --dataset WhuMLS --dataset_config config/whumls_dataset.yaml  --checkpoint checkpoints_134/epoch\=99-step\=105199.ckpt --save_predictions --output_dir results/
-
+```
 
 Checkpoints to be placed in the `clip_chkpts` folder are available for download in the official [OpenScene](https://github.com/pengsongyou/openscene) repository.
 
